@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Solution for: """
 
+import sys
+
 
 def helper_fun() -> None:
     """Calculate ..."""
