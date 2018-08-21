@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Solution for: """
+"""
+:problem:
+"""
 
 import sys
 
 
-def helper_fun() -> None:
+def func() -> int:
     """Calculate ..."""
     pass
 
 
 def main():
-    """Print ..."""
     pass
 
 
