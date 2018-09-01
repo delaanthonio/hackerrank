@@ -3,15 +3,13 @@
 :problem:
 """
 
-import sys
-
 
 def func() -> int:
-    """Calculate ..."""
     pass
 
 
 def main():
+    n = int(input())
     pass
 
 
