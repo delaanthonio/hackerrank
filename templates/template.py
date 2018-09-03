@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """
+:author: Dela Anthonio
+:hackerrank: hackerrank.com/delaanthonio
 :problem:
 """
 
@@ -10,7 +12,6 @@ def func() -> int:
 
 def main():
     n = int(input())
-    pass
 
 
 if __name__ == '__main__':
