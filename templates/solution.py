@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 :author: Dela Anthonio
-:hackerrank: hackerrank.com/delaanthonio
+:hackerrank: https://hackerrank.com/delaanthonio
 :problem:
 """
 
