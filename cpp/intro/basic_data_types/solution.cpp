@@ -1,11 +1,15 @@
-/* https://www.hackerrank.com/challenges/c-tutorial-basic-data-types */
+// Basic Data Types
+//
+// author: Dela Anthonio
+// hackerrank: https://hackerrank.com/delaanthonio
+// problem: https://hackerrank.com/challenges/c-tutorial-basic-data-types
 
 #include <cstdio>
 #include <iostream>
+
 using namespace std;
 
-int main()
-{
+int main() {
     int i;
     long l;
     char c;
