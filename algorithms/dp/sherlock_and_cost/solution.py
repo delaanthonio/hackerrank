@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
-Solution for https://www.hackerrank.com/challenges/sherlock-and-cost/problem
+Sherlock and Cost
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
+:problem: https://www.hackerrank.com/challenges/sherlock-and-cost/problem
 """
 
 from typing import List

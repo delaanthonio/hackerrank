@@ -1,5 +1,12 @@
 #!/bin/python3
-"""Solution for https://www.hackerrank.com/challenges/sherlock-and-valid-string"""
+"""
+Sherlock and the Valid String
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
+:problem: https://www.hackerrank.com/challenges/sherlock-and-valid-string
+"""
+
 
 from collections import defaultdict
 

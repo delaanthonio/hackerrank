@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """
+Two Strings
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
 :problem: https://www.hackerrank.com/challenges/two-strings/problem
 """
 

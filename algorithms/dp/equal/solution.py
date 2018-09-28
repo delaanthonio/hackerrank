@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """
+Equal
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
 :problem: https://www.hackerrank.com/challenges/equal/problem
 """
 

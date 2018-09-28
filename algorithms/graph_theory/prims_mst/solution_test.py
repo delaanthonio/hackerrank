@@ -1,6 +1,6 @@
 import pytest
 
-from prims_mst import Edge, defaultdict, prims_mst
+from solution import Edge, defaultdict, prims_mst
 
 
 @pytest.mark.parametrize("edges, start, result",

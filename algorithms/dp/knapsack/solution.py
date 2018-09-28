@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
+"""
+Knapsack
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
+:problem: https://www.hackerrank.com/challenges/unbounded-knapsack/problem
+"""
 
 from typing import List
-"""
-Solution for https://www.hackerrank.com/challenges/unbounded-knapsack/problem
-"""
 
 
 def knapsack(amount: int, weights: List[int]) -> int:
-    """Calculate the closet sum to ``amount`` given ``weights``."""
+    """
+    Return the closet sum to ``amount`` given ``weights``.
+
+    :time: O(m * n)  where m is the amount of weights and n is the amount
+    :space: O(n) where n i the amount
+    """
     sums = [0] * (amount + 1)
     for weight in weights:
         for val in range(weight, amount + 1):

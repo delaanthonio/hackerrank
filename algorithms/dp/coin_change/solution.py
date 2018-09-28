@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
-Solution for https://www.hackerrank.com/challenges/coin-change/problem
+The Coin Change Problem
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
+:problem: https://www.hackerrank.com/challenges/coin-change/problem
 """
 
 from typing import List

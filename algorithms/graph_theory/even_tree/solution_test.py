@@ -1,6 +1,6 @@
 """Test Even Tree solution"""
 
-from even_tree import prune_tree, tree_size, trim_tree
+from solution import prune_tree, tree_size, trim_tree
 
 
 def test_trivial_prune():

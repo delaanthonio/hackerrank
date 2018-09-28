@@ -1,5 +1,11 @@
 #!/bin/python3
-"""Solution for https://www.hackerrank.com/challenges/string-construction"""
+"""
+String Construction
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
+:problem: https://www.hackerrank.com/challenges/string-construction
+"""
 
 
 def calc_min_cost(string: str) -> int:

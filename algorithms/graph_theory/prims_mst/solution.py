@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Solution for: https://www.hackerrank.com/challenges/primsmstsub
+"""
+
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
+:problem: https://www.hackerrank.com/challenges/primsmstsub
 """
 
 from collections import defaultdict, namedtuple

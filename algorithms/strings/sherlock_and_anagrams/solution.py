@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """
+Sherlock and Anagrams
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
 :problem: https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem
 """
 
@@ -12,7 +16,9 @@ def choices(n: int, k: int):
 
 
 def count_anagrams(string: str) -> int:
-    """Calculate the amount of substring anagrams."""
+    """
+    Calculate the amount of substring anagrams.
+    """
     anagrams = Counter()
     for i in range(0, len(string)):
         for j in range(i + 1, len(string) + 1):

@@ -1,6 +1,8 @@
-/*
- * problem:https://www.hackerrank.com/challenges/coin-change/problem
- */
+// The Coin Change Problem
+//
+// author: Dela Anthonio
+// hackerrank: https://hackerrank.com/delaanthonio
+// problem: https://www.hackerrank.com/challenges/coin-change/problem
 
 #include <algorithm>
 #include <cmath>

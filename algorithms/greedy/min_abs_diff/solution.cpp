@@ -1,3 +1,9 @@
+// Minimum Absolute Difference in an Array
+//
+// author: Dela Anthonio
+// hackerrank: https://hackerrank.com/delaanthonio
+// problem:
+// https://hackerrank.com/challenges/minimum-absolute-difference-in-an-array
 
 #include <algorithm>
 #include <cmath>
@@ -15,7 +21,7 @@ int main() {
     cin >> n;
     copy_n(istream_iterator<int>(cin), n, back_inserter(arr));
     sort(begin(arr), end(arr));
-    for (auto i = 0; i < arr.size() - 1; i++) {
+    for (size_t i = 0; i < arr.size() - 1; i++) {
         min_abs_diff = min(min_abs_diff, abs(arr[i] - arr[i + 1]));
     }
     cout << min_abs_diff;

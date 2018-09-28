@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """
+Count Triplets
+
+:author: Dela Anthonio
+:hackerrank: https://hackerrank.com/delaanthonio
 :problem: https://www.hackerrank.com/challenges/count-triplets-1/problem
 """
 
