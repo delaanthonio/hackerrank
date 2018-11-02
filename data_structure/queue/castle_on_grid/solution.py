@@ -14,27 +14,27 @@ from typing import Iterable, List, Tuple
 Cell = Tuple[int, int]
 
 
-def take_cells(row: str, start: int) -> Iterable[int]:
-    def clear_cell(x: int) -> bool:
-        return row[x] == '.'
+def take_cells(cells: str, start: int) -> Iterable[int]:
+    def is_clear(c: int) -> bool:
+        return 0 <= c < len(cells) and cells[c] == '.'
 
-    yield from it.takewhile(clear_cell, range(start - 1, -1, -1))
-    yield from it.takewhile(clear_cell, range(start + 1, len(row)))
+    yield from it.takewhile(is_clear, it.count(start - 1, -1))
+    yield from it.takewhile(is_clear, it.count(start + 1))
 
 
 def castle_moves(rows: List[str], start: Cell, goal: Cell) -> int:
-    distances = {start: 0}
+    moves_to = {start: 0}
     cols = list(zip(*rows))
     cells = deque([start])
 
     def unseen(cell: Cell):
-        return cell not in distances
+        return cell not in moves_to
 
     while cells:
         cell = cells.popleft()
 
         if cell == goal:
-            return distances[goal]
+            return moves_to[goal]
 
         x, y = cell
 
@@ -44,7 +44,7 @@ def castle_moves(rows: List[str], start: Cell, goal: Cell) -> int:
 
         for c in filter(unseen, adjacent_cells):
             cells.append(c)
-            distances[c] = distances[cell] + 1
+            moves_to[c] = moves_to[cell] + 1
 
     return -1
 
