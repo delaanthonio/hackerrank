@@ -7,44 +7,49 @@ Roads and Libraries
 :problem: https://www.hackerrank.com/challenges/torque-and-development
 """
 
-from typing import List
 from collections import deque
+from typing import List, Set
+
+Graph = List[Set[int]]
 
 
-def min_cost(hacker_land: List[List[int]], lib_cst, road_cst) -> int:
+def build_roads(hacker_land: Graph, unseen: Set[int], start: int) -> int:
+    new_roads = 0
+    adjacent = deque([start])
+    while adjacent:
+        city = adjacent.popleft()
+        for new_city in hacker_land[city] & unseen:
+            new_roads += 1
+            unseen.remove(new_city)
+            adjacent.append(new_city)
+    return new_roads
+
+
+def build_cost(hacker_land: Graph, library_cost: int, road_cost: int) -> int:
     city_groups = 0
-    roads_built = 0
-    if lib_cst <= road_cst:
-        return lib_cst * len(hacker_land)
+    roads = 0
+    if library_cost <= road_cost:
+        return library_cost * len(hacker_land)
     unseen = set(range(len(hacker_land)))
     while unseen:
         city_groups += 1
         start_city = unseen.pop()
-        visiting = deque(x for x in hacker_land[start_city] if x in unseen)
-        unseen.difference_update(visiting)
-        while visiting:
-            city = visiting.popleft()
-            roads_built += 1
-            for neighbor in hacker_land[city]:
-                if neighbor in unseen:
-                    unseen.remove(neighbor)
-                    visiting.append(neighbor)
-
-    return roads_built * road_cst + city_groups * lib_cst
+        roads += build_roads(hacker_land, unseen, start_city)
+    return roads * road_cost + city_groups * library_cost
 
 
 def main():
     query_count = int(input())
     for _ in range(query_count):
-        city_cnt, road_cnt, lib_cst, road_cst = [
+        cities, roads, library_cost, road_cost = [
             int(x) for x in input().split()
         ]
-        hacker_land = [[] for _ in range(city_cnt)]
-        for _ in range(road_cnt):
+        hacker_land = [set() for _ in range(cities)]
+        for _ in range(roads):
             c1, c2 = [int(x) - 1 for x in input().split()]
-            hacker_land[c1].append(c2)
-            hacker_land[c2].append(c1)
-        result = min_cost(hacker_land, lib_cst, road_cst)
+            hacker_land[c1].add(c2)
+            hacker_land[c2].add(c1)
+        result = build_cost(hacker_land, library_cost, road_cost)
         print(result)
 
 
