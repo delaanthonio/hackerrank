@@ -2,7 +2,7 @@
 //
 // author: Dela Anthonio
 // hackerrank: https://hackerrank.com/delaanthonio
-// problem:
+// problem: https://www.hackerrank.com/challenges/
 
 #include <algorithm>
 #include <cmath>

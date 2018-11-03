@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author Dela Anthonio
  * @hackerrank https://hackerrank.com/delaanthonio
- * @problem
+ * @problem https://www.hackerrank.com/challenges/
  */
 public class solution {
 	public static void main(String[] args) {
