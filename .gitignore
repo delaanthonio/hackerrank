@@ -41,3 +41,5 @@ coverage.xml
 # Rope project settings
 .ropeproject
 
+# Temporary files
+tmp/
