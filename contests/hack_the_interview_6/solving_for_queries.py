@@ -7,30 +7,27 @@ Solving for Queries with Cups
 :problem: https://www.hackerrank.com/contests/hack-the-interview-vi/challenges/the-cup-game
 """
 
+from bisect import bisect_left, bisect_right
 from collections import defaultdict
 
 
 def main():
-    cups, _, swaps, queries = [int(x) for x in input().split()]
-    balls = [int(x) - 1 for x in input().split()]
-    cup_list = [0 for _ in range(cups)]
-    for ball in balls:
-        cup_list[ball] = 1
+    _, _, swaps, queries = (int(x) for x in input().split())
+    cups = defaultdict(bool)
+    for ball in (int(x) for x in input().split()):
+        cups[ball] = True
 
     for _ in range(swaps):
-        l, r = [int(x) - 1 for x in input().split()]
-        cup_list[l], cup_list[r] = cup_list[r], cup_list[l]
+        l, r = (int(x) for x in input().split())
+        cups[l], cups[r] = cups[r], cups[l]
 
-    ball_prefix = []
-    balls_seen = 0
-    for cup in cup_list:
-        if cup:
-            balls_seen += 1
-        ball_prefix.append(balls_seen)
+    cups_with_balls = sorted(cup for cup, has_ball in cups.items() if has_ball)
 
     for _ in range(queries):
-        l, r = [int(x) - 1 for x in input().split()]
-        print(ball_prefix[r] - ball_prefix[l] + cup_list[l], end=" ")
+        l, r = (int(x) for x in input().split())
+        left_cup = bisect_left(cups_with_balls, l)
+        right_cup = bisect_right(cups_with_balls, r)
+        print(right_cup - left_cup, end=" ")
 
 
 if __name__ == "__main__":
