@@ -1,0 +1,2 @@
+CompileFlags:
+  Add: [-Wpedantic -Wall -Wshadow -fsanitize=address -fsanitize=undefined -std=c++14]
