@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env pypy3
 """
 
 
@@ -7,6 +7,7 @@
 :problem: https://www.hackerrank.com/challenges/
 """
 
+import sys
 
 def func() -> int:
     pass
@@ -14,7 +15,6 @@ def func() -> int:
 
 def main():
     n = int(input())
-
 
 if __name__ == "__main__":
     main()
