@@ -13,31 +13,26 @@ from typing import Sequence
 
 
 def min_max(numbers: Sequence[int]) -> Sequence[int]:
-    windows = []
-    number_for_window = collections.defaultdict(int)
-    window_starts = {}
+    acending_numbers = []
+    max_for_window = collections.defaultdict(int)
+
+    # Append the zero to flush all the numbers at the end
     numbers.append(0)
     for window_end, number in enumerate(numbers):
         window_start = window_end
-        while windows and number < windows[-1]:
-            popped_num = windows.pop()
-            if popped_num not in window_starts:
-                continue
-            largest_window = window_end - window_starts[popped_num]
-            window_start = window_starts[popped_num]
-            del window_starts[popped_num]
-            if popped_num > number_for_window[largest_window]:
-                number_for_window[largest_window] = popped_num
+        while acending_numbers and number < acending_numbers[-1][0]:
+            popped_number, window_start = acending_numbers.pop()
+            window = window_end - window_start
+            if popped_number > max_for_window[window]:
+                max_for_window[window] = popped_number
 
-        windows.append(number)
-        if number not in window_starts:
-            window_starts[number] = window_start
+        acending_numbers.append((number, window_start))
 
     maximums = collections.deque()
     number_to_add = 0
     for window_end in range(len(numbers) - 1, 0, -1):
-        if number_for_window[window_end] > number_to_add:
-            number_to_add = number_for_window[window_end]
+        if max_for_window[window_end] > number_to_add:
+            number_to_add = max_for_window[window_end]
         maximums.appendleft(number_to_add)
 
     return maximums
