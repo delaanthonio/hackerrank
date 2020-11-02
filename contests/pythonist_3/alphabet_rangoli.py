@@ -4,6 +4,7 @@ Alphabet Rangoli
 :author: Dela Anthonio
 :hackerrank: https://hackerrank.com/delaanthonio
 :problem: https://www.hackerrank.com/contests/pythonist3/challenges/alphabet-rangoli
+"""
 
 import string
 
