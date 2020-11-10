@@ -36,3 +36,11 @@ with an emphasis on:
 [cons-arr cpp]: algorithm/dynamic_programming/construct_the_array/solution.cpp
 [cons-arr java]: algorithm/dynamic_programming/construct_the_array/solution.java
 [cons-arr py]: algorithm/dynamic_programming/construct_the_array/solution.py
+
+## Implementation
+| Challenge                        | Points | Solution(s)                 |
+| :------------------------------- | -----: | :-------------------------- |
+| [Sales by Match][sales-by-match] | 10     | [Kotlin][sales-by-match-kt] |
+
+[sales-by-match]: https://www.hackerrank.com/challenges/sock-merchant
+[sales-by-match-kt]: "algorithm/implmentation/sales_by_match/solution.kt"
