@@ -43,4 +43,4 @@ with an emphasis on:
 | [Sales by Match][sales-by-match] | 10     | [Kotlin][sales-by-match-kt] |
 
 [sales-by-match]: https://www.hackerrank.com/challenges/sock-merchant
-[sales-by-match-kt]: algorithm/implmentation/sales_by_match/solution.kt
+[sales-by-match-kt]: algorithm/implementation/sales_by_match/solution.kt
